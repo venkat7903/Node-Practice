@@ -1,0 +1,69 @@
+POST http://localhost:3000/register 
+Content-Type: application/json
+
+# {
+#     "username": "raja1234",
+#     "name": "raja",
+#     "password": "raja1234"
+# }
+{
+    "username": "raja1234",
+    "name": "raja",
+    "password": "raja1234"
+}
+
+###
+
+POST http://localhost:3000/login 
+Content-Type: application/json 
+
+{
+    "username": "raja1234",
+    "password": "raja1234"
+}
+
+#eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJuYW1lIjoicmFqYSIsInBhc3N3b3JkIjoiJDJiJDEwJHVsNE0zbm5EaURRY3ViaURJNWxTZ080Rks2RUlQcHUzY0ZIamp1RFA4T1k2Z09wcEZpVVRXIiwidXNlcm5hbWUiOiJyYWphMTIzNCIsImlhdCI6MTcxNjIyNjQzOX0.npDGGOMPbXQSNIxcrtqE_lGCWvRS7akMAif3AmKj2OU
+
+###
+
+GET http://localhost:3000/books
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJuYW1lIjoicmFqYSIsInBhc3N3b3JkIjoiJDJiJDEwJHVsNE0zbm5EaURRY3ViaURJNWxTZ080Rks2RUlQcHUzY0ZIamp1RFA4T1k2Z09wcEZpVVRXIiwidXNlcm5hbWUiOiJyYWphMTIzNCIsImlhdCI6MTcxNjIyNzAzNX0.DcMnGxk_7pJVGcuDRrj03gTY-Dn5c4YI78aMG51zirc
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/books?search_q=soc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJuYW1lIjoicmFqYSIsInBhc3N3b3JkIjoiJDJiJDEwJHVsNE0zbm5EaURRY3ViaURJNWxTZ080Rks2RUlQcHUzY0ZIamp1RFA4T1k2Z09wcEZpVVRXIiwidXNlcm5hbWUiOiJyYWphMTIzNCIsImlhdCI6MTcxNjIyNzAzNX0.DcMnGxk_7pJVGcuDRrj03gTY-Dn5c4YI78aMG51zirc
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/books?order_by=category&order=DESC
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJuYW1lIjoicmFqYSIsInBhc3N3b3JkIjoiJDJiJDEwJHVsNE0zbm5EaURRY3ViaURJNWxTZ080Rks2RUlQcHUzY0ZIamp1RFA4T1k2Z09wcEZpVVRXIiwidXNlcm5hbWUiOiJyYWphMTIzNCIsImlhdCI6MTcxNjIyNzAzNX0.DcMnGxk_7pJVGcuDRrj03gTY-Dn5c4YI78aMG51zirc
+
+###
+
+POST http://localhost:3000/books 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJuYW1lIjoicmFqYSIsInBhc3N3b3JkIjoiJDJiJDEwJHVsNE0zbm5EaURRY3ViaURJNWxTZ080Rks2RUlQcHUzY0ZIamp1RFA4T1k2Z09wcEZpVVRXIiwidXNlcm5hbWUiOiJyYWphMTIzNCIsImlhdCI6MTcxNjIyNzAzNX0.DcMnGxk_7pJVGcuDRrj03gTY-Dn5c4YI78aMG51zirc
+Content-Type: application/json
+
+{
+    "name": "telugu",
+    "category": "langauge"
+}
+
+###
+
+PUT http://localhost:3000/books/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJuYW1lIjoicmFqYSIsInBhc3N3b3JkIjoiJDJiJDEwJHVsNE0zbm5EaURRY3ViaURJNWxTZ080Rks2RUlQcHUzY0ZIamp1RFA4T1k2Z09wcEZpVVRXIiwidXNlcm5hbWUiOiJyYWphMTIzNCIsImlhdCI6MTcxNjIyNzAzNX0.DcMnGxk_7pJVGcuDRrj03gTY-Dn5c4YI78aMG51zirc
+Content-Type: application/json
+
+{
+    "name": "english",
+    "category": "first language"
+}
+
+###
+
+GET http://localhost:3000/users 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJuYW1lIjoicmFqYSIsInBhc3N3b3JkIjoiJDJiJDEwJHVsNE0zbm5EaURRY3ViaURJNWxTZ080Rks2RUlQcHUzY0ZIamp1RFA4T1k2Z09wcEZpVVRXIiwidXNlcm5hbWUiOiJyYWphMTIzNCIsImlhdCI6MTcxNjIyNzAzNX0.DcMnGxk_7pJVGcuDRrj03gTY-Dn5c4YI78aMG51zirc
